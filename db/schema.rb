@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_28_091639) do
+ActiveRecord::Schema[8.0].define(version: 2026_07_13_142158) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -22,6 +22,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_28_091639) do
     t.text "transfer_iata_codes", default: [], null: false, array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["carrier", "origin_iata", "destination_iata"], name: "index_permitted_routes_on_route_lookup_idx", unique: true
   end
 
   create_table "segments", force: :cascade do |t|
@@ -33,5 +34,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_28_091639) do
     t.datetime "sta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["airline", "origin_iata", "destination_iata", "std"], name: "index_segments_on_route_search_idx"
   end
 end

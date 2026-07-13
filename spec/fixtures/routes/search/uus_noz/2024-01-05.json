@@ -1,0 +1,26 @@
+[
+  {
+    "origin_iata": "UUS",
+    "destination_iata": "NOZ",
+    "departure_time": "2024-01-05T22:45:00.000Z",
+    "arrival_time": "2024-01-06T22:25:00.000Z",
+    "segments": [
+      {
+        "carrier": "S7",
+        "segment_number": "5258",
+        "origin_iata": "UUS",
+        "destination_iata": "OVB",
+        "std": "2024-01-05T22:45:00.000Z",
+        "sta": "2024-01-06T05:00:00.000Z"
+      },
+      {
+        "carrier": "S7",
+        "segment_number": "5367",
+        "origin_iata": "OVB",
+        "destination_iata": "NOZ",
+        "std": "2024-01-06T21:30:00.000Z",
+        "sta": "2024-01-06T22:25:00.000Z"
+      }
+    ]
+  }
+]

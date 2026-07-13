@@ -1,0 +1,50 @@
+[
+  {
+    "origin_iata": "UUS",
+    "destination_iata": "IKT",
+    "departure_time": "2024-01-06T05:20:00.000Z",
+    "arrival_time": "2024-01-07T03:00:00.000Z",
+    "segments": [
+      {
+        "carrier": "S7",
+        "segment_number": "6204",
+        "origin_iata": "UUS",
+        "destination_iata": "VVO",
+        "std": "2024-01-06T05:20:00.000Z",
+        "sta": "2024-01-06T07:15:00.000Z"
+      },
+      {
+        "carrier": "S7",
+        "segment_number": "6340",
+        "origin_iata": "VVO",
+        "destination_iata": "IKT",
+        "std": "2024-01-06T22:25:00.000Z",
+        "sta": "2024-01-07T03:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "origin_iata": "UUS",
+    "destination_iata": "IKT",
+    "departure_time": "2024-01-06T11:05:00.000Z",
+    "arrival_time": "2024-01-07T03:00:00.000Z",
+    "segments": [
+      {
+        "carrier": "S7",
+        "segment_number": "6202",
+        "origin_iata": "UUS",
+        "destination_iata": "VVO",
+        "std": "2024-01-06T11:05:00.000Z",
+        "sta": "2024-01-06T12:55:00.000Z"
+      },
+      {
+        "carrier": "S7",
+        "segment_number": "6340",
+        "origin_iata": "VVO",
+        "destination_iata": "IKT",
+        "std": "2024-01-06T22:25:00.000Z",
+        "sta": "2024-01-07T03:00:00.000Z"
+      }
+    ]
+  }
+]
