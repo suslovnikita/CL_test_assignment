@@ -4,11 +4,7 @@ module Routes
   class Search
     # @api private
     class BindCollector
-      Bind = Data.define(:name, :value, :model, :column_name) do
-        def type
-          model.type_for_attribute(column_name)
-        end
-
+      Bind = Data.define(:name, :value, :type) do
         def to_query_attribute
           ActiveRecord::Relation::QueryAttribute.new(name, value, type)
         end
@@ -23,13 +19,12 @@ module Routes
 
       # @param name [String, Symbol]
       # @param value [Object]
-      # @param model [Class]
-      # @param column_name [String]
+      # @param type [ActiveModel::Type::Value]
       # @return [String]
-      def add(name, value, model:, column_name:)
+      def add(name, value, type:)
         key = name.to_s
         index = indexes[key]
-        bind = Bind.new(name: key, value:, model:, column_name:)
+        bind = Bind.new(name: key, value:, type:)
 
         if index
           validate_same_bind!(binds.fetch(index), bind)
